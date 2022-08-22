@@ -24,4 +24,8 @@ contract Whitelist {
         addressWhitelisted[address(msg.sender)] = true;
         numAddressesWhitelisted += 1;
     }
+
+    function getNumAddressesWhitelisted() public view {
+        return numAddressesWhitelisted;
+    }
 }
