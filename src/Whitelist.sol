@@ -11,7 +11,7 @@ contract Whitelist {
     uint8 public numAddressesWhitelisted;
 
     // if an address is whitelisted, we would set it to true, it is false by default for all other addresses.
-    mapping (address => bool) addressWhitelisted;
+    mapping (address => bool) public addressWhitelisted;
 
     constructor(uint8 _maxWhiteListedAddresses) {
         maxWhiteListedAddresses = _maxWhiteListedAddresses;
@@ -23,6 +23,10 @@ contract Whitelist {
         require(numAddressesWhitelisted < maxWhiteListedAddresses, "Max Number of Whitelisted Addresses already reached.");
         addressWhitelisted[address(msg.sender)] = true;
         numAddressesWhitelisted += 1;
+    }
+
+    function isAddressWhitelisted(address _addr) external view returns (bool) {
+        return addressWhitelisted[_addr];
     }
 
     function getNumAddressesWhitelisted() public view returns(uint8) {
