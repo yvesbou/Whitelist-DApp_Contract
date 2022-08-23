@@ -5,3 +5,20 @@ This repo contains the Smart Contract part of this project. Head over to ... for
 
 ## Foundry instead of Hardhat
 In LearnWeb3DAO Smart Contract projects are completed with Hardhat. To challenge me a little bit more and since many Web3 Veterans advocate for switching over to Foundry, I gave it a try.
+
+## Test contract
+```shell
+# up to 5 v's for more verbosity in the console output
+
+forge test -vvv
+```
+
+## Deploy contract
+
+```shell
+# To give our shell access to our environment variables
+source .env
+# To deploy and verify our contract
+forge script script/Whitelist.s.sol:WhitelistScript --rpc-url $ALCHEMY_API_KEY_URL  --private-key $GOERLI_PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY -vvvv
+
+```
