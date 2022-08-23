@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Unlicense
-pragma solidity 0.8.0;
+pragma solidity 0.8.16;
 
 contract Whitelist {
 
@@ -25,7 +25,7 @@ contract Whitelist {
         numAddressesWhitelisted += 1;
     }
 
-    function getNumAddressesWhitelisted() public view {
+    function getNumAddressesWhitelisted() public view returns(uint8) {
         return numAddressesWhitelisted;
     }
 }
