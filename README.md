@@ -1,7 +1,7 @@
 # Whitelist dApp - Level 8 Sophomore Track 
 This code is part of the Sophomore Track from [LearnWeb3DAO](https://learnweb3.io/courses/c1d7081b-63a9-4c6e-b35c-9fcbbad418b2/lessons/acd04999-1230-4533-b6de-6b4e4978914c).
 
-This repo contains the Smart Contract part of this project. Head over to ... for the client application.
+This repo contains the Smart Contract part of this project. Head over to this [Repo](https://github.com/yvesbou/Whitelist-DApp_Frontend) for the client application.
 
 The contract is deployed to [Goerli](https://goerli.etherscan.io/address/0x61390fc02a4c21bf4a6a60a03b287706a81b0489#code).
 
